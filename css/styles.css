@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75em;
+    color: #131313;
+    background-color: #dad9d9
+}
+
+#mainheader {
+    height: 50px;
+    line-height: 50px;
+    padding-bottom: 4px;
+    background-color: #363534;
+    color: #fff
+}
+#mainheader h1 {
+    margin: 0 0 0 1em;
+    float: left
+}
+
+#mainheader a {
+    color: #fff;
+    text-decoration: none
+}
+
+
+#addPostSection{
+    width: 96%;
+    padding: 2%;
+    margin: 1em auto;
+    max-width: 960px;
+    background-color: #c0f146;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, .2);
+    border-radius: .3em
+}
+section {
+    padding: 40px;
+}
+textarea {
+    width: calc(100% - 12px);
+    min-height: 5em;
+    padding: 5px;
+    border-radius: .25rem;
+    border: 1px solid #ccc
+}
+.message-text{
+    font-family: Courier New, Courier, monospace;
+    font-size: 17px;
+}
+.container input[type="submit" ]{
+    background-color: #363534;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: -40px;
+}
+.container input[type="submit" ]:hover{
+    background-color: #232020;
+}
+footer {
+    clear: both;
+    padding: 2em 0 0;
+    font-size: .825em;
+    color: #666;
+    text-align: center
+}
+
+.selection{
+    color: white;
+    background-color: #363534;
+    margin: 7px 7px 0;
+    padding: 0 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+}
+.selection:active{
+    margin: 40px 40px 40px 60px;
+}
+
+#postSection {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#postSection h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#postSection div {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+
+}
+
+#postSection p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#postSection button[type="submit"] {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: -40px;
+    float: right;
+}
+
+#postSection button[type="submit"]:hover {
+    background-color: #cc0000;
+}
