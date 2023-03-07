@@ -1,13 +1,26 @@
 <?php
 include ("guestbook.php");
+
+/**
+ *
+ */
 class DBguestbook
 {
-private $posts=[];
-private $link;
 
+    private $posts=[];
+    /**
+     * @var false|mysqli
+     */
+    private $link;
+
+    /**
+     *
+     */
     public function __construct()
     {
-        $this->link=mysqli_connect('studentmysql.miun.se','naal2001','ky5xmwbc','naal2001');
+        $this->link=mysqli_connect('localhost','root','','labb4');
+
+       // $this->link=mysqli_connect('studentmysql.miun.se','naal2001','ky5xmwbc','naal2001');
         if (!$this->link){
             die('could not connect');
         }
@@ -23,7 +36,14 @@ private $link;
             }
         }
     }
-    public function addPost($name,$message,$date)
+
+    /**
+     * @param $name
+     * @param $message
+     * @param $date
+     * @return void
+     */
+    public function addPost($name, $message, $date)
     {
        $this->posts[]=new guestbook($name,$message,$date);
         //Lägger in de nya värdena i databasen
@@ -31,11 +51,14 @@ private $link;
         $this->link->query($sql);
     }
 
-   public function delPost($index){
+    /**
+     * @param $index
+     * @return void
+     */
+    public function delPost($index){
 
        //Tar bort värdena som är ekvivalent vid medlemsarrayens index
        $sql = "DELETE from guestbooktable where Username='" . $this->posts[$index]->getUsername() . "' and Post='" . $this->posts[$index]->getMessage() . "' and PostDate='" . $this->posts[$index]->getDate() . "';";
-       print "delete";
        $this->link->query($sql);
        unset($this->posts[$index]);
    }
